@@ -6,7 +6,6 @@ public class ParticleMovement : MonoBehaviour
 {   
     [SerializeField] private Rigidbody2D rigidBodyComponent;
     private Vector3 lastVelocity;
-   // private float maxSpeed = 20f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,17 +26,16 @@ public class ParticleMovement : MonoBehaviour
             lastVelocity.x = 10f;
         }
 
-        Debug.Log(rigidBodyComponent.velocity);
-       
     }
 
     void IncreaseVelocity() {
-        lastVelocity.y += 1f;
-        lastVelocity.x += 1f;
+        lastVelocity.y += 5f;
+        lastVelocity.x += 5f;
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
 
+        // Ignore particle <-> particle collisions so that no velocity is lost during collisions
         if (collision.gameObject.layer == 7)    {
             return;
         }

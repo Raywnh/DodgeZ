@@ -6,6 +6,8 @@ public class SpawnObject : MonoBehaviour
 {   
 
     [SerializeField] GameObject particle;
+    private static int maxNumberOfObjects = 5;
+    private int currentNumberOfObjects = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +23,10 @@ public class SpawnObject : MonoBehaviour
     }
 
     void spawnObject()  {
-        Debug.Log("Spawned");
-        Instantiate(particle, new Vector3(Random.Range(-10f,8f), Random.Range(-1f,6f), 0f),Quaternion.identity);
+        
+        if (currentNumberOfObjects < maxNumberOfObjects)    {
+            Instantiate(particle, new Vector3(Random.Range(-10f,8f), Random.Range(-1f,6f), 0f),Quaternion.identity);
+        }
+        currentNumberOfObjects++;
     }
 }

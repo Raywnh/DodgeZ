@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class CollisionKill : MonoBehaviour
+public class CollisionKillRestart : MonoBehaviour
 {   
     [SerializeField] private Rigidbody2D rigidBodyComponent;
+    private string scene = "";
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        scene = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
@@ -25,6 +27,6 @@ public class CollisionKill : MonoBehaviour
     }
 
     void RespawnPlayer()    {
-        rigidBodyComponent.position = new Vector2(0,2);
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
 }
