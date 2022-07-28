@@ -36,7 +36,7 @@ public class ParticleMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
 
         // Ignore particle <-> particle collisions so that no velocity is lost during collisions
-        if (collision.gameObject.layer == 7)    {
+        if (collision.gameObject.layer == 7 || collision.gameObject.layer == 8)    {
             return;
         }
     }

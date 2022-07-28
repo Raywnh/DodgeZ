@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CollisionKillRestart : MonoBehaviour
+public class DestroyOnCollision : MonoBehaviour
 {   
     [SerializeField] private Rigidbody2D rigidBodyComponent;
     private string scene = "";
@@ -21,12 +21,19 @@ public class CollisionKillRestart : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D gameObj)    {
-        if (gameObj.gameObject.name == "Player") {
+        if (gameObj.gameObject.layer == 7) {
             RespawnPlayer();
+        }
+        if (gameObj.gameObject.layer == 8)  {
+            DestroyObject(gameObj.gameObject);
         }
     }
 
     void RespawnPlayer()    {
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
+    }
+
+    void DestroyObject(GameObject point)    {
+        Destroy(point, 0.0f);
     }
 }
