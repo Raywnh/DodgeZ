@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class SpawnObject : MonoBehaviour
 {   
-
+    [SerializeField] private float invokeRepeatingTime;
     [SerializeField] private GameObject particle;
+
     private static int maxNumberOfObjects = 5;
     private int currentNumberOfObjects = 0;
+ 
    
 
     // Start is called before the first frame update

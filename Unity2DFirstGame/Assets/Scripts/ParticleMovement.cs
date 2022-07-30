@@ -38,7 +38,7 @@ public class ParticleMovement : MonoBehaviour
         }
     }*/
 
-    private void OnCollisionEnter2D(Collision2D collision)  {
+    void OnCollisionEnter2D(Collision2D collision)  {
         
         var speed = lastVelocity.magnitude;
 

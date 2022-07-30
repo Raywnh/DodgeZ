@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (IsGrounded()) {
-            extraJumps = 3;
+            extraJumps = 3; // Reset amount of extra jumps
         }
         
     }
@@ -50,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
             isJumping = false;
             extraJumps--;
         }
+
+        // Allows players to move downwards even when midair
         if (downPress)  {
             rigidBodyComponent.velocity = new Vector2(rigidBodyComponent.velocity.x,-jumpingPower);
             downPress = false;
@@ -58,6 +60,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private bool IsGrounded()   {
-        return Physics2D.OverlapCircle(groundCheck.position,0.2f,groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position,0.2f,groundLayer);  // Returns if the ground layer touches the player
     }
 }
