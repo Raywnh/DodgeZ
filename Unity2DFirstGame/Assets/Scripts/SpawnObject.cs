@@ -5,9 +5,10 @@ using UnityEngine;
 public class SpawnObject : MonoBehaviour
 {   
 
-    [SerializeField] GameObject particle;
+    [SerializeField] private GameObject particle;
     private static int maxNumberOfObjects = 5;
     private int currentNumberOfObjects = 0;
+   
 
     // Start is called before the first frame update
     void Start()

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {   
-    private int extraJumps = 2;
+    private int extraJumps = 3;
     private float horizontalInput;
-    private float speed = 12f;
-    private float jumpingPower = 8f;
+    private float speed = 13f;
+    private float jumpingPower = 9f;
     private bool isJumping = false;
     private bool downPress = false;
     
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (IsGrounded()) {
-            extraJumps = 2;
+            extraJumps = 3;
         }
         
     }

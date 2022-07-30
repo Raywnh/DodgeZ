@@ -24,6 +24,9 @@ public class DestroyOnCollision : MonoBehaviour
         if (gameObj.gameObject.layer == 7) {
             RespawnPlayer();
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D gameObj) {
         if (gameObj.gameObject.layer == 8)  {
             DestroyObject(gameObj.gameObject);
         }

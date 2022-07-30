@@ -14,8 +14,8 @@ TagManager:
   - Player
   - Particle
   - Point
-  - 
-  - 
+  - Front
+  - Back
   - 
   - 
   - 
@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Back
+    uniqueID: 3451726841
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
