@@ -44,6 +44,8 @@ public class DestroyOnCollision : MonoBehaviour
 
     void DestroyObject(GameObject point)    {
         Destroy(point, 0.0f);
+        
+        FindObjectOfType<SpawnPoints>().decreaseNumberOfPoints();
     }
 
     void ChangeScore()  {

@@ -1313,8 +1313,8 @@ Transform:
   - {fileID: 985928126}
   - {fileID: 1420517879}
   - {fileID: 1637963437}
-  - {fileID: 2121680611}
   - {fileID: 939765878}
+  - {fileID: 2121680611}
   - {fileID: 1745653267}
   - {fileID: 2030193475}
   m_Father: {fileID: 0}
@@ -1329,11 +1329,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1944481265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74040d83f47adb84591f2b9b538612ef, type: 3}
+  m_Script: {fileID: 11500000, guid: c372afa847b97764baa2cba0265c7c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timePerSpawn: 10
   particle: {fileID: 1420517876}
-  invokeRepeatingTime: 10
 --- !u!114 &1944481268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1343,11 +1343,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1944481265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74040d83f47adb84591f2b9b538612ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e3a405871a491b41b054e3f207524b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particle: {fileID: 7427253805743427017, guid: 83ae1dab4a9faa44d953c7e75ed4a11c, type: 3}
-  invokeRepeatingTime: 5
+  timePerSpawn: 3
+  point: {fileID: 7427253805743427017, guid: 83ae1dab4a9faa44d953c7e75ed4a11c, type: 3}
 --- !u!4 &2030193475 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7861580951114474744, guid: 0b7e41acf0545a447b0e0df84d605ae3, type: 3}
@@ -1371,7 +1371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6200029174932191921, guid: 9c53daedabae53940950b58a85e7111b, type: 3}
       propertyPath: m_Radius
-      value: 0.75
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6200029174932191921, guid: 9c53daedabae53940950b58a85e7111b, type: 3}
       propertyPath: m_IsTrigger
