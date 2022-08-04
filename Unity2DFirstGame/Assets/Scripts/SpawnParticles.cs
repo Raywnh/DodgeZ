@@ -7,7 +7,7 @@ public class SpawnParticles : MonoBehaviour
     [SerializeField] private float timePerSpawn;
     [SerializeField] private GameObject particle;
 
-    private static int maxNumberOfObjects = 5;
+    private static int maxNumberOfObjects = 4;
     private int currentNumberOfParticles = 0;
  
     // Start is called before the first frame update

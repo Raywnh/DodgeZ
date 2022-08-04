@@ -7,7 +7,7 @@ public class SpawnPoints : MonoBehaviour
     [SerializeField] private float  timePerSpawn;
     [SerializeField] private GameObject point;
 
-    private static int maxNumberOfObjects = 5;
+    private static int maxNumberOfObjects = 4;
     private int currentNumberOfPoints = 0;
  
     // Start is called before the first frame update
