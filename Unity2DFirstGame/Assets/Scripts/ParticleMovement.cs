@@ -24,19 +24,7 @@ public class ParticleMovement : MonoBehaviour
        
     }
 
-    /*private void IncreaseVelocity() {
-       lastVelocity.x += 1f;
-       lastVelocity.y += 1f;
-        
-    }*/
-
-    /*private void OnTriggerEnter2D(Collider2D collision) {
-
-        // Ignore particle <-> particle collisions so that no velocity is lost during collisions
-        if (collision.gameObject.layer == 7)    {
-            return;
-        }
-    }*/
+  
 
     void OnCollisionEnter2D(Collision2D collision)  {
         
