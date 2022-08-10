@@ -26,6 +26,6 @@ public class StartMenu : MonoBehaviour
     }
 
     public void OpenGuide()    {
-
+        SceneManager.LoadScene(2);
     }
 }
