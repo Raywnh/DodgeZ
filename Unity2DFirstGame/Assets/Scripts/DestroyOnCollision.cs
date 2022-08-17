@@ -33,24 +33,44 @@ public class DestroyOnCollision : MonoBehaviour
 
         // Destroy the points object if we touch it
         if (gameObj.gameObject.layer == 8)  {
-            DestroyObject(gameObj.gameObject);
+            DestroyPoints(gameObj.gameObject);
             ChangeScore();
         }
+
+        if (gameObj.gameObject.layer == 11) {
+            DestroyShields(gameObj.gameObject);
+            GiveShield();
+        }
+    }
+
+    public void ShieldOn() {
+        Physics2D.IgnoreLayerCollision(6,7,true);
+    }
+    
+    public void ShieldOff()    {
+        Physics2D.IgnoreLayerCollision(6,7,false);
     }
 
     void RespawnPlayer()    {
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
 
-    void DestroyObject(GameObject point)    {
+    void DestroyPoints(GameObject point)    {
         Destroy(point, 0.0f);
-        
         FindObjectOfType<SpawnPoints>().decreaseNumberOfPoints();
+    }
+
+    void DestroyShields(GameObject shield)  {
+        Destroy(shield,0.0f);
+        FindObjectOfType<SpawnShields>().decreaseNumberOfShields();
     }
 
     void ChangeScore()  {
         FindObjectOfType<ScoreKeep>().IncreaseScoreByPoints(); // Finds our ScoreKeep class and increases points
     }
 
+    void GiveShield()   {
+        FindObjectOfType<PlayerShield>().TurnOnShield();
+    }
     
 }

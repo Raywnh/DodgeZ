@@ -8,6 +8,7 @@ public class ScoreKeep : MonoBehaviour
     [SerializeField] private Text textBox;
     protected internal int score = 0;
 
+
     // Start is called before the first frame update
     void Start()
     {   
