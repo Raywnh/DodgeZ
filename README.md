@@ -1,2 +1,2 @@
 # Unity-Dodging-Game
-Simple 2Dgame created with Unity Engine
+Simple 2D game created with Unity Engine
