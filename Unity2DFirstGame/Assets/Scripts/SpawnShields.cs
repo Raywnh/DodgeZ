@@ -25,7 +25,7 @@ public class SpawnShields : MonoBehaviour
     void Spawn()  {
         
         if (currentNumberOfShields < maxNumberOfObjects)    {
-            Instantiate(shield, new Vector3(Random.Range(-10f,8f), Random.Range(-1f,6f), 0f),Quaternion.identity);
+            Instantiate(shield, new Vector3(Random.Range(-10f,8f), -1.2f, 0f),Quaternion.identity);
             currentNumberOfShields++;
         }
 

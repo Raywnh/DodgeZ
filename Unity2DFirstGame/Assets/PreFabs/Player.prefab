@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5593111675959986839}
   - component: {fileID: 5593111675959986843}
   - component: {fileID: 5593111675959986842}
-  - component: {fileID: 5593111675959986840}
+  - component: {fileID: 3635599472150384639}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -139,11 +139,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBodyComponent: {fileID: 5593111675959986839}
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 3036810285277330805}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
---- !u!114 &5593111675959986840
+--- !u!114 &3635599472150384639
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,10 +152,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5593111675959986833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577787fed46bca74bb759969ebf0af9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 998ab4db6680f7744a95c010ec147feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBodyComponent: {fileID: 5593111675959986839}
+  player: {fileID: 5593111675959986833}
 --- !u!1 &7952185504172125144
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,14 +22,14 @@ public class PlayerShield : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       Debug.Log(shieldDuration);
+      
     }
 
     void EndShield()    {
         Destroy(shieldGlowObject, 0.5f);
         shieldIsAlreadyOn = false;
 
-        FindObjectOfType<DestroyOnCollision>().ShieldOff();
+        FindObjectOfType<CollisionManager>().ShieldOff();
     }
 
     public void TurnOnShield() {
@@ -39,7 +39,7 @@ public class PlayerShield : MonoBehaviour
 
             shieldGlowObject.transform.SetParent(playerTransform);
 
-            FindObjectOfType<DestroyOnCollision>().ShieldOn();
+            FindObjectOfType<CollisionManager>().ShieldOn();
 
             shieldIsAlreadyOn = true;
             shieldDuration = 7.0f;

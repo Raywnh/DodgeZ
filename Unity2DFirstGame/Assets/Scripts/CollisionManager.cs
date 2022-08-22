@@ -1,17 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class DestroyOnCollision : MonoBehaviour
+
+public class CollisionManager : MonoBehaviour
 {   
     [SerializeField] private Rigidbody2D rigidBodyComponent;
-    private string scene = "";
+    [SerializeField] private GameObject player;
     
     // Start is called before the first frame update
     void Start()
     {   
-        scene = SceneManager.GetActiveScene().name;
+
         
     }
 
@@ -25,7 +25,7 @@ public class DestroyOnCollision : MonoBehaviour
 
         // Kill our player if we touch the particles
         if (gameObj.gameObject.layer == 7) {
-            RespawnPlayer();
+            KillPlayer();
         }
     }
 
@@ -51,8 +51,9 @@ public class DestroyOnCollision : MonoBehaviour
         Physics2D.IgnoreLayerCollision(6,7,false);
     }
 
-    void RespawnPlayer()    {
-        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+    void KillPlayer()    {
+        Destroy(player);
+        FindObjectOfType<RespawnScreen>().SetPlayerDead();
     }
 
     void DestroyPoints(GameObject point)    {
