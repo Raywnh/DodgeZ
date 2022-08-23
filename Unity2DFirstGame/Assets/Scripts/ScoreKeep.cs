@@ -31,4 +31,8 @@ public class ScoreKeep : MonoBehaviour
         score += 500;
         textBox.text = score.ToString();
     }
+
+    public string GetFinalScore() {
+        return score.ToString();
+    }
 }

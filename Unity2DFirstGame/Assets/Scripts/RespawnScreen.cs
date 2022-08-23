@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class RespawnScreen : MonoBehaviour
 {   
 
     [SerializeField] private GameObject RespawnScreenUI;
+    [SerializeField] private Text scoreBox;
+    private string score; 
+
     private bool dead = false;
 
     // Start is called before the first frame update
@@ -27,5 +31,12 @@ public class RespawnScreen : MonoBehaviour
     public void SetPlayerDead()    {
         dead = true;
         RespawnScreenUI.SetActive(true);
+        DisplayScore();
+    }
+
+    void DisplayScore()  {
+        var score = FindObjectOfType<ScoreKeep>().GetFinalScore();
+
+        scoreBox.text = score;
     }
 }

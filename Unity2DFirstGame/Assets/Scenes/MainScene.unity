@@ -626,6 +626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RespawnScreenUI: {fileID: 540881252}
+  scoreBox: {fileID: 465279545}
 --- !u!1 &465279540
 GameObject:
   m_ObjectHideFlags: 0
